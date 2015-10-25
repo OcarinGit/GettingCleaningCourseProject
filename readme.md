@@ -4,9 +4,9 @@
 1. First step is to download the zip file containing the lectures.
 2.Second step (which is not shown in here is to decompress the zip file and to rename the resultant folder to "data" without the quotes) for easier reading of the file
       
-3. Third step is to obtain the factors' names. This makes it simpler to name the columns. We achieve this by reading the activity_labels.txt and features.txt text files
+3. Third step is to obtain the factors' names. This makes it simpler to name the columns and the activities. We achieve this by reading the activity_labels.txt and features.txt text files
 
-4. Read the files from test subjects and prepare the columns so subject activity and subject type (test or train) and finally the lectures from every subject are bind into a single table
+4. Read the files from test subjects and prepare the columns so that subject, activity (already changing the activity number for the descriptive activity name), subject type (test or train) and finally the lectures from every subject are bind into a single table.
 
 5. Do the same with the train subject
 
