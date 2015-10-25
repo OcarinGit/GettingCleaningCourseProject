@@ -44,7 +44,7 @@
       ##1. Merges the training and the test sets to create one data set. With the merging also the activity names bind
       cleanData<-rbind(cleanTestData,cleanTraData)
       
-      ## This instruction fullfills requirement 3
+      ## This instruction fullfills requirement 4
       ##3. Uses descriptive activity names to name the activities in the data set. I took the character vector that contains the features names and change the column names with the colnames function
       colnames(cleanData)[4:564]<-featData$V2
       names(cleanData)
