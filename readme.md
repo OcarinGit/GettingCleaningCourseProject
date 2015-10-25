@@ -14,46 +14,4 @@
 
 7. Give good presentation to the data.
 
-
-####Code Book
-
-      ###Activities and features
-      actData$V2
-      featData$V2
-      
-      ###Read the files that contain the lectures from the subject (subject_text.txt) the lectures taken from the samsung device (X_test.txt) and finally from the activities the subject perform for every lecture (y_text.txt)
-      subjectTestData
-      xTestData
-      yTestData
-      
-      ####Column Subject_Test to know if the subject is from the test or train set
-      subjectTest
-      train
-      
-      ###Bind the columns so we can have the subject Id first, then the activity the subject performed in a neat character way The a column saying if the subject is from the test o train set and finally the rest of the data, meaning the lectures
-      cleanTestData
-      
-       
-      ###Read the data from the train set
-      subjectTraData
-      xTraData
-      yTraData
-
-	###Bind the columns so we can have the subject Id first, then the activity the subject performed in a neat character way The a column saying if the subject is from the test o train set and finally the rest of the data, 
-      cleanTraData
-
-      ################# This instruction FullFills Requirement 1 #######
-      #1. Merges the training and the test sets to create one data set.
-      cleanData<-rbind(cleanTestData,cleanTraData)
-      
-      
-      ################ This instruction fullfills requirement 3 ########
-      #3. Uses descriptive activity names to name the activities in the data set
-      colnames(cleanData)[4:564]<-features
-      names(cleanData)
-      
-      ############## This instruction fullfulls requirement 2 ########
-      #2. Extracts only the measurements on the mean and standard deviation for each measurement. 
-      goodColumns<-c(which(grepl("mean()", names(cleanData))),which(grepl("std()", names(cleanData))))
-      tidyData<-cleanData[,c(1:4,goodColumns)]
-      
+Roughly those were the task performed. All the lines inside the code have comments giving detail about every action performed. And the CodeBook.md provides a good source of detailed informations as well.
