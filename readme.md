@@ -14,4 +14,6 @@
 
 7. Give good presentation to the data.
 
+8. Create the final data set wich creates a second, independent tidy data set with the average of each variable  for ech activity and each subject
+
 Roughly those were the task performed. All the lines inside the code have comments giving detail about every action performed. And the CodeBook.md provides a good source of detailed informations as well.

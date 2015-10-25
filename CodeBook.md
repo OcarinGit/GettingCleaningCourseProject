@@ -53,3 +53,10 @@
       ##2. Extracts only the measurements on the mean and standard deviation for each measurement. I extract only the functions' names from the columns that have mean() and std() inside the column name and assigned them to a logical vector. Finally, I extract only the columns that have those names in them.
       goodColumns<-c(which(grepl("mean()", names(cleanData))),which(grepl("std()", names(cleanData))))
       tidyData<-cleanData[,c(1:4,goodColumns)]
+
+      ## This instruction fullfills requeriment 5
+      #5. From the data set in step 4, creates a second, independet tidy data set with the average
+      #of each variable  for ech activity and each subject
+      actSplit<-split(tidyData, tidyData[,c("Subject","Activity")])
+      summAct<-sapply(actSplit, function(x) colMeans(x[,4:83]))
+      write.table(summAct,file="MeanActivitySubject.txt", row.names = FALSE)
